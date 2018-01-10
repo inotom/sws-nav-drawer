@@ -1,8 +1,8 @@
-import existy from 'swsutils/src/existy';
-import attr from './attr.js';
-import isPcWidth from './isPcWidth.js';
+const existy = require('swsutils/src/existy');
+const attr = require('./attr.js');
+const isPcWidth = require('./isPcWidth.js');
 
-export default (el) => {
+module.exports = (el) => {
   let size    = parseInt(attr(el, 'data-sws-nav-drawer-size', 50), 10);
   let bgColor = attr(el, 'data-sws-nav-drawer-bg-color', '#ffc966');
   let fgColor = attr(el, 'data-sws-nav-drawer-fg-color', '#ffffff');

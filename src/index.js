@@ -1,8 +1,8 @@
-import existy from 'swsutils/src/existy';
-import attr from './attr.js';
-import css from './css.js';
-import display from './display.js';
-import toggle from './toggle.js';
+const existy = require('swsutils/src/existy');
+const attr = require('./attr.js');
+const css = require('./css.js');
+const display = require('./display.js');
+const toggle = require('./toggle.js');
 
 const ROOT_ID   = 'sws-nav-drawer';
 const HANDLE_ID = 'sws-nav-drawer-handle';
@@ -11,7 +11,7 @@ const STYLE_ID  = 'sws-nav-drawer-style';
 const IMAGE_ID  = 'sws-nav-drawer-image';
 const CLOSE_ID  = 'sws-nav-drawer-close';
 
-export default () => {
+module.exports = () => {
 
   const el     = document.getElementById(ROOT_ID);
   let elStyle  = document.getElementById(STYLE_ID);

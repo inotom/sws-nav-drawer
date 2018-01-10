@@ -18,7 +18,7 @@ const close = (el) => {
   el.setAttribute('inert', true);
 };
 
-export default (el, nextState) => {
+module.exports = (el, nextState) => {
   switch (nextState) {
     case 'open':
       open(el);

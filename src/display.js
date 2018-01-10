@@ -1,6 +1,6 @@
-import isMobile from './isMobile.js';
+const isMobile = require('./isMobile.js');
 
-export default (el, elHandle) => {
+module.exports = (el, elHandle) => {
   let display = 'none';
   if (isMobile(el)) {
     display = 'block';
