@@ -1,49 +1,65 @@
-# sws-nav-drawer
+# @inotom/sws-nav-drawer
 
-A JavaScript to display navigation drawer container.
+Toggle root element attribute for navigation drawer.
+
+
+## Demo
+
+[Demo](https://sandbox.serendip.ws/sws-nav-drawer.html)
+
+
+## Install
+
+### npm
+
+```
+npm install -D @inotom/sws-nav-drawer
+```
+
 
 ## Usage
 
-Place HTML element with ID `sws-nav-drawer`.
+### Browser
 
 ```html
-<div id="sws-nav-drawer">
-  ... YOUR MENU HERE ...
-</div>
+<script src="sws-nav-drawer.min.js"></script>
+<script>
+SwsNavDrawer.swsNavDrawer();
+</script>
 ```
 
-```html
-<div id="sws-nav-drawer"
-  data-sws-nav-drawer-size="40"
-  data-sws-nav-drawer-bg-color="#3c7aef"
-  data-sws-nav-drawer-fg-color="#fefe3f"
-  data-sws-nav-drawer-position="left"
-  data-sws-nav-drawer-z-index="2000"
-  data-sws-nav-drawer-has-close-button="true"
-  data-sws-nav-drawer-mobile-width="-1">
-  ... YOUR MENU HERE ...
-</div>
+### ES module
+
+```js
+import { swsNavDrawer } from '@inotom/sws-nav-drawer';
+
+swsNavDrawer();
 ```
 
-## Data attributes
 
-## Data attributes
+## Options
 
-| attribute name                         | content                           | defaults  |
-|:---------------------------------------|:----------------------------------|:----------|
-| `data-sws-nav-drawer-size`             | Vartical and horizontal size      | `50`      |
-| `data-sws-nav-drawer-bg-color`         | Background color                  | `#ffc966` |
-| `data-sws-nav-drawer-fg-color`         | Foreground color                  | `#ffffff` |
-| `data-sws-nav-drawer-z-index`          | Value of z-index                  | `1000`    |
-| `data-sws-nav-drawer-position`         | Slide in from this position       | `left`    |
-| `data-sws-nav-drawer-has-close-button` | Display close button              | `true`    |
-| `data-sws-nav-drawer-mobile-width`     | Mobile device judgment width      | `640`     |
-| `data-sws-nav-drawer-src`              | Image path                        | `null`    |
+| name             | type     | defaults                    | description                              |
+|------------------|----------|-----------------------------|------------------------------------------|
+| `key`            | `String` | `is-sws-nav-drawer-active`  | Root element attribute name              |
+| `toggleSelector` | `String` | `.js-sws-nav-drawer-toggle` | Selector for toggle event handle element |
+| `closeSelector`  | `String` | `.js-sws-nav-drawer-close`  | Selector for close event handle element  |
+
+### example
+
+```js
+swsNavDrawer({
+  key: 'some-key-string',
+  toggleSelector: '.js-some-toggle-selector',
+  closeSelector: '.js-some-close-selector',
+});
+```
 
 ## License
 
 MIT
 
+
 ## Author
 
-iNo
+inotom
