@@ -39,6 +39,14 @@ class SwsNavDrawer {
           this.open();
         }
       });
+
+      window.addEventListener('keyup', (e: KeyboardEvent) => {
+        if (this.isActive() && e.code === 'Escape') {
+          e.preventDefault();
+          e.stopPropagation();
+          this.close();
+        }
+      });
     });
 
     const elCloses = document.querySelectorAll<HTMLElement>(this.closeSelector);
